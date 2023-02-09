@@ -4,9 +4,9 @@ import {
     Link
 } from "react-router-dom";
 
-export default class Navbar extends Component {
+const NavBar = ()=>{
 
-    handleType = ()=>{
+    const handleType = ()=>{
         let search = document.getElementById('searchTxt');
         search.addEventListener("input",function(){
             let inputVal = search.value;
@@ -26,7 +26,7 @@ export default class Navbar extends Component {
             })
         })
     }
-    render() {
+
         return (
             <div>
                 <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -53,7 +53,7 @@ export default class Navbar extends Component {
                                 <li className="nav-item"> <Link className="nav-link" to="/technology">technology</Link></li>
                             </ul>
                             <form className="d-flex" role="search" >
-                                <input className="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search" onClick={this.handleType}/>
+                                <input className="form-control me-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search" onClick={handleType}/>
                                     <button className="btn btn-outline-success" type="submit" id="mySearch" > Search</button>
                             </form>
                         </div>
@@ -61,5 +61,7 @@ export default class Navbar extends Component {
                 </nav>
             </div>
         )
-    }
+    
 }
+
+export default NavBar

@@ -1,6 +1,6 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 import React, { Component } from 'react'
 import News from './components/News';
 
@@ -33,7 +33,7 @@ export default class App extends Component {
       <div>
         <Router>
 
-        <Navbar/>
+        <NavBar/>
         <LoadingBar
         color='#f11946'
         progress={this.state.progress}
